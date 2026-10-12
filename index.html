@@ -16,7 +16,7 @@ h1{font-size:19px;margin:0;font-weight:700;color:var(--ink)}h1 small{display:blo
 .tabs{display:flex;gap:6px;margin:10px 0}
 select{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:6px;border-radius:6px;font:inherit;max-width:100%}
 .bar{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
-.tab{display:block;margin-top:14px}.sh{font-size:15px;margin:0 0 8px;color:var(--ink);border-bottom:1px solid var(--gold);padding-bottom:3px}#tip{position:fixed;z-index:9;display:none;max-width:260px;background:#0B1F44;color:#fff;border-left:3px solid #C9A227;padding:7px 10px;border-radius:5px;font-size:12px;pointer-events:none;box-shadow:0 4px 14px rgba(0,0,0,.25)}#tip b{color:#EBD78F}#tip div{display:flex;justify-content:space-between;gap:12px}.qh{cursor:pointer;transition:box-shadow .15s,filter .15s,background .15s,fill .15s,stroke .15s}
+.bar2{flex-wrap:nowrap}.bar2 .btn{flex:none;white-space:nowrap}.bar2 select{flex:1 1 0;min-width:0;text-overflow:ellipsis}.ok,.no,.wt{font-weight:700;white-space:nowrap;font-size:11px}.ok{color:#1E8E5A}.no{color:#C0392B}.wt{color:var(--mut);font-weight:400}.tab{display:block;margin-top:14px}.sh{font-size:15px;margin:0 0 8px;color:var(--ink);border-bottom:1px solid var(--gold);padding-bottom:3px}#tip{position:fixed;z-index:9;display:none;max-width:260px;background:#0B1F44;color:#fff;border-left:3px solid #C9A227;padding:7px 10px;border-radius:5px;font-size:12px;pointer-events:none;box-shadow:0 4px 14px rgba(0,0,0,.25)}#tip b{color:#EBD78F}#tip div{display:flex;justify-content:space-between;gap:12px}.qh{cursor:pointer;transition:box-shadow .15s,filter .15s,background .15s,fill .15s,stroke .15s}
 td.qh,.bl.qh{outline:none}
 td.qh.act,.bl.qh.act,td.qh:focus-visible,.bl.qh:focus-visible{outline:2px solid #C9A227;outline-offset:-2px;box-shadow:0 3px 10px rgba(11,31,68,.4);position:relative;z-index:2;filter:brightness(1.12)}
 td.qh.pin,.bl.qh.pin{outline:2px solid #C9A227;outline-offset:-2px;box-shadow:0 0 0 3px rgba(201,162,39,.4),0 4px 12px rgba(11,31,68,.45);position:relative;z-index:3;filter:brightness(1.18)}
@@ -24,7 +24,7 @@ td.qh.pin,.bl.qh.pin{outline:2px solid #C9A227;outline-offset:-2px;box-shadow:0 
 circle.qh.act{fill:rgba(201,162,39,.3);stroke:#C9A227;stroke-width:2}circle.qh.pin{fill:rgba(201,162,39,.5);stroke:#C9A227;stroke-width:3}
 rect.qh.act{fill:rgba(201,162,39,.28)}rect.qh.pin{fill:rgba(201,162,39,.5);stroke:#C9A227}
 #tip{transition:opacity .12s}
-.grid1{display:grid;grid-template-columns:minmax(280px,420px) 1fr;gap:14px;align-items:start}
+.grid1{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:stretch}.grid1>.card{display:flex;flex-direction:column}.grid1>.card>.sc{flex:1}#radar{flex:1;display:flex;align-items:center}#radar svg{width:100%}
 @media(max-width:820px){.grid1{grid-template-columns:1fr}}
 .card{border:1px solid var(--line);border-radius:8px;padding:10px;background:var(--bg)}
 .card h3{margin:0 0 6px;font-size:13px;color:var(--ink);border-left:3px solid var(--gold);padding-left:6px}
@@ -49,7 +49,7 @@ tr.g td{background:var(--panel);font-weight:700;color:var(--ink);border-left:3px
  h1{font-size:12pt}header{padding-bottom:3px}.tab{margin-top:0}.sh{font-size:10pt;margin-bottom:3px}#p2{break-before:page;zoom:.88}#p1,#p2{break-inside:avoid}
  .sc{overflow:visible}td{padding:1px 4px;font-size:7pt;line-height:1.15}th{font-size:6.5pt;padding:2px 3px}td.nm{max-width:none}
  .bl{height:9px;min-width:110px}.bl i{top:3px}.bl b{height:8px}.bl u{top:1px}.hc{font-size:6.5pt}
- .grid1{grid-template-columns:105mm 1fr;gap:6px}.card{padding:5px}.stats{margin:0 0 2px}.stats span{padding:0 6px;font-size:7pt}.lg{font-size:6.5pt;margin-top:2px}.ft{font-size:6pt;margin-top:2px}
+ .grid1{grid-template-columns:1fr 1fr;gap:6px}.card{padding:5px}.stats{margin:0 0 2px}.stats span{padding:0 6px;font-size:7pt}.lg{font-size:6.5pt;margin-top:2px}.ft{font-size:6pt;margin-top:2px}
  tr.g td{font-size:6.5pt}
 }
 </style></head><body><div class="wrap">
@@ -64,8 +64,8 @@ tr.g td{background:var(--panel);font-weight:700;color:var(--ink);border-left:3px
 </section>
 
 <section class="tab" id="p2"><h2 class="sh">2 · ตัวชี้วัดผลการดำเนินงานตามเป้าหมายการให้บริการกระทรวง (31 ตัวชี้วัด)</h2>
-<div class="bar noprint"><button class="btn" onclick="rf()">↻ รีเฟรช</button><button class="btn" id="m2" onclick="mode()">จัดกลุ่มตามเป้าหมายกระทรวง</button>
-<button class="btn" id="b68" onclick="tg('y')">เทียบผลปี 68</button><button class="btn" id="bag" onclick="tg('a')">หน่วยงานที่เกี่ยวข้อง</button><select id="fg" onchange="draw()"></select><select id="fa" onchange="draw()"></select></div>
+<div class="bar noprint"><button class="btn" onclick="rf()" title="รีเฟรช" aria-label="รีเฟรช">↻</button><button class="btn" id="b68" onclick="tg('y')">เทียบผลปี 68</button><button class="btn" id="bag" onclick="tg('a')">หน่วยงานที่เกี่ยวข้อง</button><button class="btn on" id="bq" onclick="tg('q')">ไตรมาส</button><button class="btn on" id="bs" onclick="tg('s')">ผลประเมิน</button></div>
+<div class="bar bar2 noprint"><select id="fg" onchange="draw()"></select><select id="fa" onchange="draw()"></select><button class="btn" id="m2" onclick="mode()">จัดกลุ่มตามเป้าหมายกระทรวง</button></div>
 <div id="fl"></div><div class="stats" id="st"></div>
 <div class="sc"><table id="tb"></table></div>
 <div class="lg"><span><s style="background:#0B1F44"></s>≥100% ของแผน</span><span><s style="background:#5D7099"></s>70–99%</span><span><s style="background:#EBD78F"></s>30–69%</span><span><s style="background:#F7EFCF"></s>&lt;30%</span><span><s style="background:#f6f8fc;border:1px solid #ddd"></s>ยังไม่รายงาน/วัดสิ้นปี</span>
@@ -148,9 +148,10 @@ function kpi(){let h='<tr><th>#</th><th style="text-align:left">ตัวชี�
 let M=0,ST='';
 function mode(){M=1-M;m2.classList.toggle('on',!!M);draw()}
 function ss(v){ST=ST==v?'':v;draw()}
-function rf(){M=0;ST='';SY=SA=false;fg.value='';fa.value='';m2.classList.remove('on');b68.classList.remove('on');bag.classList.remove('on');load()}
+function rf(){M=0;ST='';SY=SA=false;SQ=SC=true;bq.classList.add('on');bs.classList.add('on');fg.value='';fa.value='';m2.classList.remove('on');b68.classList.remove('on');bag.classList.remove('on');load()}
 let SY=false,SA=false;
-function tg(k){if(k=='y')SY=!SY;else SA=!SA;b68.classList.toggle('on',SY);bag.classList.toggle('on',SA);draw()}
+let SQ=true,SC=true;
+function tg(k){if(k=='y')SY=!SY;else if(k=='q')SQ=!SQ;else if(k=='s')SC=!SC;else SA=!SA;b68.classList.toggle('on',SY);bag.classList.toggle('on',SA);bq.classList.toggle('on',SQ);bs.classList.toggle('on',SC);draw()}
 function draw0(){clr()}
 const esc=x=>String(x).replace(/"/g,'&quot;');
 function draw(){clr();const gi=fg.value,ag=fa.value;
@@ -159,16 +160,16 @@ function draw(){clr();const gi=fg.value,ag=fa.value;
  const cnt={p:0,f:0,w:0};base.forEach(r=>cnt[S(r)]++);
  let rows=ST?base.filter(r=>S(r)==ST):[...base];
  if(M)rows.sort((a,b)=>a[2]-b[2]||a[0]-b[0]);
- const NC=11+(SY?1:0)+(SA?1:0);lgy.style.display=SY?'':'none';
- let h='<tr><th>ข้อ</th><th style="text-align:left">ตัวชี้วัด</th>'+(SA?'<th>หน่วยงานที่เกี่ยวข้อง</th>':'')+(SY?'<th class="n">ผล 68</th>':'')+'<th class="n">แผน 69</th><th class="n">ผล 69</th><th>หน่วย</th><th>Bullet (% ของแผน)</th><th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th><th>รวม %</th></tr>';
+ const NC=6+(SQ?4:0)+(SY?2:0)+(SA?1:0)+(SC?1:0);lgy.style.display=SY?'':'none';
+ let h='<tr><th>ข้อ</th><th style="text-align:left">ตัวชี้วัด</th>'+(SA?'<th>หน่วยงานที่เกี่ยวข้อง</th>':'')+(SY?'<th class="n">ผล 68</th>':'')+'<th class="n">แผน 69</th><th class="n">ผล 69</th><th>หน่วย</th>'+(SC?'<th>ผลประเมิน</th>':'')+'<th>Bullet (% ของแผน)</th>'+(SQ?'<th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th>':'')+''+(SY?'<th>รวม %</th>':'')+'</tr>';
  let last=-1;
  rows.forEach(r=>{const[n,nm,g,u,y,p,a,q,t,ags]=r;
   if(M&&g!=last){h+=`<tr class="g"><td colspan="${NC}">เป้าหมาย ${g+1}: ${GO[g]}</td></tr>`;last=g}
   const pc=pct(a,p,t),py=y==null?null:pct(y,p,t=='l'?'s':t),c=cum(q,t).map(v=>pct(v,p,t));
   const bw=pc==null?0:Math.min(pc,150)/150*100;
-  h+=`<tr><td>${n}</td><td class="nm">${nm}</td>${SA?`<td>${ags}</td>`:''}${SY?`<td class="n">${f(y)}</td>`:''}<td class="n">${f(p)}</td><td class="n"><b>${a==null?'รอรายงาน':f(a)}</b></td><td>${u}</td>
+  h+=`<tr><td>${n}</td><td class="nm">${nm}</td>${SA?`<td>${ags}</td>`:''}${SY?`<td class="n">${f(y)}</td>`:''}<td class="n">${f(p)}</td><td class="n"><b>${a==null?'รอรายงาน':f(a)}</b></td><td>${u}</td>${SC?(pc==null?'<td><span class="wt">… รอรายงาน</span></td>':pc>=100?'<td><span class="ok">✔ ผ่าน</span></td>':'<td><span class="no">✖ ไม่ผ่าน</span></td>'):''}
   <td><div class="bl qh" tabindex="0" data-tip="<b>ข้อ ${n}: ${esc(nm)}</b><div><span>แผนปี 69</span><span>${f(p)} ${u}</span></div><div><span>ผลปี 69</span><span><b>${a==null?'รอรายงาน':f(a)}</b></span></div><div><span>% ของแผน</span><span><b>${pc==null?'–':f(pc)+'%'}</b></span></div>${y==null?'':`<div><span>ผลปี 68</span><span>${f(y)} (${f(py)}%)</span></div>`}<div><span>สถานะ</span><span>${pc==null?'รอรายงาน':pc>=100?'ผ่าน':'ไม่ผ่าน'}</span></div>"><i style="width:${bw}%"></i><b style="left:66.7%"></b>${SY&&py!=null?`<u style="left:${Math.min(py,150)/1.5}%"></u>`:''}</div></td>
-  ${q.map((v,k)=>`<td class="hc qh ${hc(c[k])}" tabindex="0" data-tip="<b>ข้อ ${n} · ไตรมาส ${k+1}</b><div><span>ช่วง</span><span>${QM[k]}</span></div><div><span>ผลรายไตรมาส</span><span>${f(v)}</span></div>${t=='s'?`<div><span>ผลสะสม</span><span>${f(cum(q,t)[k])}</span></div>`:''}<div><span>แผนปี 69</span><span>${f(p)}</span></div><div><span>% ของแผน</span><span><b>${f(c[k])}%</b></span></div>">${f(v)}</td>`).join('')}<td class="hc ${hc(pc)}">${pc==null?'–':f(pc)+'%'}</td></tr>`});
+  ${SQ?q.map((v,k)=>`<td class="hc qh ${hc(c[k])}" tabindex="0" data-tip="<b>ข้อ ${n} · ไตรมาส ${k+1}</b><div><span>ช่วง</span><span>${QM[k]}</span></div><div><span>ผลรายไตรมาส</span><span>${f(v)}</span></div>${t=='s'?`<div><span>ผลสะสม</span><span>${f(cum(q,t)[k])}</span></div>`:''}<div><span>แผนปี 69</span><span>${f(p)}</span></div><div><span>% ของแผน</span><span><b>${f(c[k])}%</b></span></div>">${f(v)}</td>`).join(''):''}${SY?`<td class="hc ${hc(pc)}">${pc==null?'–':f(pc)+'%'}</td>`:''}</tr>`});
  tb.innerHTML=h;
  const ch=(k,l,v)=>`<span onclick="ss('${k}')" class="${ST==k?'on':''}">${l}: <b>${v}</b></span>`;
  st.innerHTML=`<span onclick="ss('')" class="${ST==''?'on':''}">ทั้งหมด: <b>${base.length}</b></span>`+ch('p','ผ่าน (≥100%)',cnt.p)+ch('f','ไม่ผ่าน',cnt.f)+ch('w','รอรายงาน',cnt.w);
