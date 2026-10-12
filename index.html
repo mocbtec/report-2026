@@ -175,7 +175,7 @@ function draw(){clr();const gi=fg.value,ag=fa.value;
  fl.textContent='ตัวกรอง: '+(M?'จัดกลุ่มตามเป้าหมาย':'เรียงตามข้อ')+' · '+(gi===''?'ทุกเป้าหมาย':'เป้าหมาย '+(+gi+1))+' · '+(ag===''?'ทุกหน่วยงาน':ag+' '+AG[ag])+' · สถานะ: '+({'':'ทั้งหมด',p:'ผ่าน',f:'ไม่ผ่าน',w:'รอรายงาน'})[ST]}
 fg.innerHTML='<option value="">เป้าหมายกระทรวง: ทั้งหมด</option>'+GO.map((g,i)=>`<option value="${i}">${i+1}. ${g}</option>`).join('');
 fa.innerHTML='<option value="">หน่วยงาน: ทั้งหมด</option>'+Object.keys(AG).map(k=>`<option value="${k}">${k} – ${AG[k]}</option>`).join('');
-ab.innerHTML='<b>หน่วยงาน:</b> '+Object.keys(AG).map(k=>k+' '+AG[k]).join(' · ')+'<br>หมายเหตุ: ตัวชี้วัดประเภทมูลค่า/จำนวน แสดงผลสะสมรายไตรมาส · ตัวชี้วัดประเภทร้อยละ/อัตรา แสดงค่าที่รายงานในแต่ละไตรมาสเทียบแผน · ข้อ 14 ยิ่งอันดับน้อยยิ่งดี · แหล่งข้อมูล: Google Sheet (ดึงอัตโนมัติทุก 5 นาที หรือกด ↻ รีเฟรช)';
+ab.innerHTML='<b>หน่วยงาน:</b> '+Object.keys(AG).map(k=>k+' '+AG[k]).join(' · ')+'<br>หมายเหตุ: ตัวชี้วัดประเภทมูลค่า/จำนวน แสดงผลสะสมรายไตรมาส · ตัวชี้วัดประเภทร้อยละ/อัตรา แสดงค่าที่รายงานในแต่ละไตรมาสเทียบแผน · ข้อ 14 ยิ่งอันดับน้อยยิ่งดี · แหล่งข้อมูล: Google Sheet (ดึงอัตโนมัติทุก 1 นาที หรือกด ↻ รีเฟรช (Google เผยแพร่การแก้ไขล่าช้าได้ราว 5 นาที))';
 const QM=['ต.ค.–ธ.ค. 68','ม.ค.–มี.ค. 69','เม.ย.–มิ.ย. 69','ก.ค.–ก.ย. 69'];
 const tipG=document.getElementById('tip');
 let pin=false,cur=null;
@@ -200,10 +200,19 @@ function apply(rows){let sec=0,got=0;
   const q=[6,7,9,10].map(c=>{const v=num(r[c]);return v==null&&ty=='s'&&/^\s*-\s*$/.test(r[c]||'')?0:v});
   rec[o]=y;if(p!=null)rec[o+1]=p;rec[o+2]=a2;rec[o+3]=q;got++});
  return got}
-async function load(){try{const r=await fetch(SHEET+'&_='+Date.now(),{cache:'no-store'});if(!r.ok)throw 0;if(apply(csv(await r.text()))<30)throw 0;
-  src.textContent='● เชื่อมต่อ Google Sheet · อัปเดต '+new Date().toLocaleTimeString('th-TH',{hour:'2-digit',minute:'2-digit'})}
- catch(e){src.textContent='○ ใช้ข้อมูลสำรองในไฟล์ (เชื่อมต่อ Google Sheet ไม่ได้)'}
- radar();kpi();draw()}
-load();setInterval(load,300000);
+const VER='v8',PROXY='https://api.allorigins.win/raw?url=';let busy=false;
+async function getCSV(){const u=SHEET+'&_='+Date.now(),errs=[];
+ for(const [nm,url] of [['ตรง',u],['proxy',PROXY+encodeURIComponent(u)]]){
+  try{const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw new Error('HTTP '+r.status);const t=await r.text();if(t.trim().startsWith('<'))throw new Error('ไม่ใช่ CSV (ชีตอาจยังไม่ได้เผยแพร่)');return {t,via:nm}}
+  catch(e){errs.push(nm+': '+(e.message||e));console.warn('Sheet fetch failed',nm,e)}}
+ throw new Error(errs.join(' | '))}
+async function load(){if(busy)return;busy=true;src.textContent='… กำลังโหลดข้อมูลจาก Google Sheet';
+ try{const {t,via}=await getCSV();const n=apply(csv(t));if(n<30)throw new Error('อ่านตัวชี้วัดได้ '+n+' จาก 36 แถว — โครงสร้างชีตเปลี่ยน?');
+  src.textContent='● เชื่อมต่อ Google Sheet'+(via=='proxy'?' (ผ่าน proxy)':'')+' · อัปเดต '+new Date().toLocaleTimeString('th-TH',{hour:'2-digit',minute:'2-digit',second:'2-digit'})+' · '+VER;src.title='ดึงข้อมูลสำเร็จ — คลิกเพื่อโหลดใหม่'}
+ catch(e){src.textContent='○ ใช้ข้อมูลสำรองในไฟล์ · ดึง Google Sheet ไม่ได้ ('+(e.message||e)+') · คลิกเพื่อลองใหม่ · '+VER;src.title='คลิกเพื่อลองดึงข้อมูลอีกครั้ง'}
+ busy=false;radar();kpi();draw()}
+src.style.cursor='pointer';src.onclick=load;
+load();setInterval(load,60000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden)load()});
 addEventListener('beforeprint',()=>{});
 </script></body></html>
