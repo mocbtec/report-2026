@@ -18,7 +18,7 @@ h1{font-size:19px;margin:0;font-weight:700;color:var(--ink)}h1 small{display:blo
 .tabs{display:flex;gap:6px;margin:10px 0}
 select{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:6px;border-radius:6px;font:inherit;max-width:100%}
 .bar{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
-.bar2{flex-wrap:nowrap}.bar2 .btn{flex:none;white-space:nowrap}.bar2 select{flex:1 1 0;min-width:0;text-overflow:ellipsis}.ok,.no,.wt{font-weight:700;white-space:nowrap;font-size:14px;display:block;text-align:center}.ok{color:#1E8E5A}.no{color:#C0392B}.wt{color:var(--mut);font-weight:400}.tab{display:block;margin-top:14px}.sh{font-size:15px;margin:0 0 8px;color:var(--ink);border-bottom:1px solid var(--gold);padding-bottom:3px}#tip{position:fixed;z-index:9;display:none;max-width:260px;background:#0B1F44;color:#fff;border-left:3px solid #C9A227;padding:7px 10px;border-radius:5px;font-size:12px;pointer-events:none;box-shadow:0 4px 14px rgba(0,0,0,.25)}#tip b{color:#EBD78F}#tip div{display:flex;justify-content:space-between;gap:12px}.qh{cursor:pointer;transition:box-shadow .15s,filter .15s,background .15s,fill .15s,stroke .15s}
+.bar2{flex-wrap:nowrap}.bar2 .btn{flex:none;white-space:nowrap}.bar2 select{flex:1 1 0;min-width:0;text-overflow:ellipsis}.ok,.no,.wt{font-weight:700;white-space:nowrap;font-size:14px;display:block;text-align:center}.ok{color:#1E8E5A}.no{color:#C0392B}.wt{color:var(--mut);font-weight:400}#tb{font-size:12px}#tb td{font-size:1em}#tb th{font-size:.92em}#tb .hc{font-size:.92em}#tb .ok,#tb .no,#tb .wt{font-size:1.2em}.fz{margin-left:auto;display:flex;gap:4px}.cv{display:inline-block;width:1.1em;color:var(--gold);font-weight:700}.xp{cursor:pointer}tr.dt>td{background:var(--panel);padding:6px 10px}.sub{width:auto;min-width:70%}.sub th{background:var(--navy2);color:#fff;font-size:.88em}.sub td{font-size:.95em}tr.sr>td:not(.hc){background:var(--panel)}.ind{padding-left:12px;font-size:.95em}.nt{font-size:.85em;color:var(--mut);padding-left:12px}.tab{display:block;margin-top:14px}.sh{font-size:15px;margin:0 0 8px;color:var(--ink);border-bottom:1px solid var(--gold);padding-bottom:3px}#tip{position:fixed;z-index:9;display:none;max-width:260px;background:#0B1F44;color:#fff;border-left:3px solid #C9A227;padding:7px 10px;border-radius:5px;font-size:12px;pointer-events:none;box-shadow:0 4px 14px rgba(0,0,0,.25)}#tip b{color:#EBD78F}#tip div{display:flex;justify-content:space-between;gap:12px}.qh{cursor:pointer;transition:box-shadow .15s,filter .15s,background .15s,fill .15s,stroke .15s}
 td.qh,.bl.qh{outline:none}
 td.qh.act,.bl.qh.act,td.qh:focus-visible,.bl.qh:focus-visible{outline:2px solid #C9A227;outline-offset:-2px;box-shadow:0 3px 10px rgba(11,31,68,.4);position:relative;z-index:2;filter:brightness(1.12)}
 td.qh.pin,.bl.qh.pin{outline:2px solid #C9A227;outline-offset:-2px;box-shadow:0 0 0 3px rgba(201,162,39,.4),0 4px 12px rgba(11,31,68,.45);position:relative;z-index:3;filter:brightness(1.18)}
@@ -38,7 +38,7 @@ td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}td.nm{min-width:240
 tr.g td{background:var(--panel);font-weight:700;color:var(--ink);border-left:3px solid var(--gold);font-size:11px}
 .hc{text-align:center;font-size:11px;font-weight:600;min-width:52px;color:#fff;font-variant-numeric:tabular-nums}
 .h4{background:#0B1F44}.h3{background:#5D7099}.h2{background:#EBD78F;color:#0B1F44}.h1{background:#F7EFCF;color:#0B1F44}.h0{background:var(--panel);color:var(--mut);font-weight:400}
-.bl{position:relative;height:12px;min-width:130px;background:linear-gradient(90deg,#dfe4ee 0 33.3%,#e9ecf3 33.3% 66.6%,#f3f5f9 66.6%)}
+.bl{position:relative;height:12px;min-width:130px;background:linear-gradient(90deg,#a9b2c3 0 33.3%,#c1c8d5 33.3% 66.6%,#d9dde6 66.6%);box-shadow:inset 0 0 0 1px #98a2b6}
 .bl i{position:absolute;left:0;top:4px;height:4px;background:#0B1F44}.bl b{position:absolute;top:1px;width:2px;height:10px;background:#C9A227}.bl u{position:absolute;top:2px;width:7px;height:7px;margin-left:-3px;border:1.5px solid #888;border-radius:50%;background:#fff}
 .stats{display:flex;gap:8px;flex-wrap:wrap;font-size:12px;margin:0 0 6px}.stats span.on{background:#0B1F44;color:#fff}.stats span[onclick]{cursor:pointer}.stats span{padding:2px 9px;border-radius:12px;background:var(--panel);border:1px solid var(--line)}.stats b{color:var(--gold)}
 .lg{display:flex;gap:10px;flex-wrap:wrap;font-size:10.5px;color:var(--mut);margin-top:6px;align-items:center}.lg s{display:inline-block;width:11px;height:9px;text-decoration:none;vertical-align:-1px;margin-right:3px}
@@ -49,7 +49,7 @@ tr.g td{background:var(--panel);font-weight:700;color:var(--ink);border-left:3px
  :root{--bg:#fff;--ink:#0B1F44;--mut:#6b7488;--line:#d5dae5;--panel:#f6f8fc;--navy:#0B1F44;padding:0}
  body{font-size:8pt}.wrap{max-width:none;padding:0}.noprint,.tabs{display:none!important}#fl{display:block}
  h1{font-size:12pt}header{padding-bottom:3px}.tab{margin-top:0}.sh{font-size:10pt;margin-bottom:3px}#p2{break-before:page;zoom:.88}#p1,#p2{break-inside:avoid}
- .sc{overflow:visible}td{padding:1px 4px;font-size:7pt;line-height:1.15}th{font-size:6.5pt;padding:2px 3px}td.nm{max-width:none}
+ .sc{overflow:visible}#tb{font-size:7pt!important}td{padding:1px 4px;font-size:7pt;line-height:1.15}th{font-size:6.5pt;padding:2px 3px}td.nm{max-width:none}
  .bl{height:9px;min-width:110px}.bl i{top:3px}.bl b{height:8px}.bl u{top:1px}.hc{font-size:6.5pt}
  .grid1{grid-template-columns:2fr 3fr;gap:6px}.card{padding:5px}.stats{margin:0 0 2px}.stats span{padding:0 6px;font-size:7pt}.lg{font-size:6.5pt;margin-top:2px}.ft{font-size:6pt;margin-top:2px}
  tr.g td{font-size:6.5pt}
@@ -66,12 +66,12 @@ tr.g td{background:var(--panel);font-weight:700;color:var(--ink);border-left:3px
 </section>
 
 <section class="tab" id="p2"><h2 class="sh">2 · ตัวชี้วัดผลการดำเนินงานตามเป้าหมายการให้บริการกระทรวง (31 ตัวชี้วัด)</h2>
-<div class="bar noprint"><button class="btn" onclick="rf()" title="รีเฟรช" aria-label="รีเฟรช">↻</button><button class="btn" id="b68" onclick="tg('y')">เทียบผลปี 68</button><button class="btn" id="bag" onclick="tg('a')">หน่วยงานที่เกี่ยวข้อง</button><button class="btn on" id="bq" onclick="tg('q')">ไตรมาส</button><button class="btn on" id="bs" onclick="tg('s')">ผลประเมิน</button></div>
+<div class="bar noprint"><button class="btn" onclick="rf()" title="รีเฟรช" aria-label="รีเฟรช">↻</button><button class="btn" id="b68" onclick="tg('y')">เทียบผลปี 68</button><button class="btn" id="bag" onclick="tg('a')">หน่วยงานที่เกี่ยวข้อง</button><button class="btn on" id="bq" onclick="tg('q')">ไตรมาส</button><button class="btn on" id="bs" onclick="tg('s')">ผลประเมิน</button><span class="fz"><button class="btn" onclick="fs(-1)" title="ลดขนาดตัวอักษร" aria-label="ลดขนาดตัวอักษร">A−</button><button class="btn" onclick="fs(1)" title="ขยายขนาดตัวอักษร" aria-label="ขยายขนาดตัวอักษร">A+</button></span></div>
 <div class="bar bar2 noprint"><button class="btn" id="m2" onclick="mode()">จัดกลุ่มตามเป้าหมายกระทรวง</button><select id="fg" onchange="draw()"></select><select id="fa" onchange="draw()"></select></div>
 <div id="fl"></div><div class="stats" id="st"></div>
 <div class="sc"><table id="tb"></table></div>
 <div class="lg"><span><s style="background:#0B1F44"></s>≥100% ของแผน</span><span><s style="background:#5D7099"></s>70–99%</span><span><s style="background:#EBD78F"></s>30–69%</span><span><s style="background:#F7EFCF"></s>&lt;30%</span><span><s style="background:#f6f8fc;border:1px solid #ddd"></s>ยังไม่รายงาน/วัดสิ้นปี</span>
-<span>Bullet: แท่งน้ำเงิน = ผลปี 69 · เส้นทอง = แผน (100%) · สเกล 0–150%</span><span id="lgy">○ = ผลปี 68</span><span>ตัวเลขในช่อง Q1–Q4 = ค่ารายไตรมาสตาม Excel · สีตาม % สะสมเทียบแผน</span></div>
+<span>Bullet: แท่งน้ำเงิน = ผลปี 69 · เส้นทอง = แผน (100%) · สเกล 0–150%</span><span>▸ คลิกที่ข้อ/ชื่อตัวชี้วัด เพื่อดูแผน–ผลรายหน่วยงาน (* = ใช้เป้าของตัวชี้วัดรวม)</span><span id="lgy">○ = ผลปี 68</span><span>ตัวเลขในช่อง Q1–Q4 = ค่ารายไตรมาสตาม Excel · สีตาม % สะสมเทียบแผน</span></div>
 </section>
 <div id="tip"></div><div class="ft" id="ab"></div>
 </div>
@@ -117,6 +117,7 @@ const I=[
 [29,'สัดส่วนหน่วยงานผ่านเกณฑ์ประเมินคุณธรรมและความโปร่งใส (ITA)',7,'ร้อยละ',91.67,100,null,[null,null,null,null],'r','ทุกหน่วยงาน'],
 [30,'ความสำเร็จโครงการตามนโยบาย Cloud First',7,'ร้อยละ',null,100,100,[23.03,57.5,79.9,100],'r','สป. คต. คน. จร. ทป. สค. สนค.'],
 [31,'บุคลากรที่ผ่านการอบรมและได้รับใบประกาศนียบัตร (สพร.)',7,'ร้อยละ',null,90,69.05,[4.17,25.2,69.05,100],'r','สป. สนค. สศท.']];
+const D={"2":[["คต.",232,30,391,[0,391,0,0],"ผลการดำเนินงานเท่าเดิม อ้างอิงจากไตรมาส 2"],["คน.",2,1,4,[0,0,0,4],""]],"6":[["พค.",1338.16,1002.9,1477.2,[14.66,237.17,209.15,1016.22],""],["คน.",2675.64,909,2756.69,[0,1215.79,70.01,1470.89],""],["สป.",2424.76,1807,2196.52,[57.62,893.25,583.95,661.7],""]],"7":[["พค.",13685,5980,12288,[2705,3535,3149,2899],""],["ทป.",3642,1500,2937,[517,530,688,1202],""],["สศท.",2580,2000,2718,[16,688,1096,918],""],["สวอ.",355,300,358,[0,105,55,198],"Header เขียนว่าไตรมาส 3"],["สคพ.",1259,3160,4451,[0,0,668,3783],"ไม่แน่ใจว่ารายงานตามไตรมาส/ทั้งปีงบ"]],"8":[["พค.",1014.15,796.5,1329.02,[0,0,198.88,1130.14],""],["ทป.",41.81,70,686,[0,0,0,686],""],["สศท.",3082.67,1300,65489.0,[17.16,20.05,262.04,65189.75],""],["สวอ.",12.17,170,21.5,[0,0,0,21.5],"เหลือจัดเทศกาล TBC ข้อมูลอีกครั้งในเดือน ธ.ค."]],"10":[["สค.",2664.5,2750,4601.46,[1055.5,735.71,1891.69,918.56],""],["พค.",695.57,310.38,574.95,[0,0,0,574.95],""]],"15":[["สนค.",30,18,30,[1,12,3,14],""],["สวอ.",5,5,5,[0,0,0,5],""],["สคพ.",5,6,4,[0,0,3,1],"ไม่แน่ใจว่ารายงานตามไตรมาส/ทั้งปีงบ"]],"18":[["จร.",161,70,133,[41,21,30,41],""],["ทป.",4,3,4,[4,0,0,0],""]],"20":[["สค.",140574.73,129330,153926.45,[8829.92,24828.64,107190.11,13063.57],"ไตรมาส 3 อาจเป็นยอดสะสม"],["สป.",261.84,135,137.34,[0,82.58,53.66,1.1],""]],"25":[["สป.",null,null,null,[0,0,0,null],"รอรายงานผล"],["คต.",null,null,91.8,[0,0,91.75,91.8],""],["ทป.",null,null,91,[0,0,0,91],""],["พค.",null,null,84.35,[0,0,0,84.35],""],["สค.",null,null,99.87,[0,0,0,99.87],""],["สวอ.",null,null,91.98,[0,0,0,91.98],""]],"26":[["คต.",null,null,85,[30,0,65,85],""],["สค.",null,null,100,[0,0,0,100],""]],"30":[["สป.",null,null,100,[21.24,57.48,78.72,100],""],["คต.",null,null,100,[0,100,100,100],""],["คน.",null,null,100,[100,100,100,100],""],["จร.",null,null,100,[10,100,100,100],""],["ทป.",null,null,100,[0,0,100,100],""],["สค.",null,null,100,[0,0,0,100],""],["สนค.",null,null,100,[30,45,80.57,100],""]],"31":[["สป.",null,null,100,[0,0,100,100],""],["สนค.",null,null,100,[12.5,37.5,50,100],""],["สศท.",null,null,100,[0,38.09,57.14,100],""]]};
 const f=n=>n==null?'–':n.toLocaleString('en-US',{maximumFractionDigits:2});
 function cum(q,t){if(t!='s')return q;let s=0,any=false;return q.map(v=>{if(v==null)return null;s+=v;return s})}
 function pct(v,p,t){if(v==null)return null;return t=='l'?p/v*100:v/p*100}
@@ -150,9 +151,22 @@ function kpi(){let h='<tr><th>#</th><th style="text-align:left">ตัวชี�
 let M=0,ST='';
 function mode(){M=1-M;m2.classList.toggle('on',!!M);draw()}
 function ss(v){ST=ST==v?'':v;draw()}
-function rf(){M=0;ST='';SY=SA=false;SQ=SC=true;bq.classList.add('on');bs.classList.add('on');fg.value='';fa.value='';m2.classList.remove('on');b68.classList.remove('on');bag.classList.remove('on');load()}
+function rf(){M=0;ST='';SY=SA=false;SQ=SC=true;OPEN.clear();FS=12;tb.style.fontSize='';bq.classList.add('on');bs.classList.add('on');fg.value='';fa.value='';m2.classList.remove('on');b68.classList.remove('on');bag.classList.remove('on');load()}
 let SY=false,SA=false;
-let SQ=true,SC=true;
+const OPEN=new Set();
+function tx(n){OPEN.has(n)?OPEN.delete(n):OPEN.add(n);draw()}
+function subRow(r){const[n,nm,g,u,y,p,a,q,t,ags]=r;
+ let L=D[n]&&D[n].length?D[n]:null;
+ if(!L){const ar=ags.split(' ');L=ar.length==1?[[ar[0],y,p,a,q,'']]:[]}
+ const noq=q.every(v=>v==null);let h='';
+ L.forEach(x=>{const[ag,ay,ap,aa,aq,note]=x,ep=ap!=null?ap:(t=='s'?null:p),pc=ep&&aa!=null?pct(aa,ep,t):null,py=ay==null||!ep?null:pct(ay,ep,t=='l'?'s':t),cq=cum(aq,t),c=cq.map(v=>ep?pct(v,ep,t):null);
+  const nmS=ag=='ทุกหน่วยงาน'?ag:ag+' '+(AG[ag]||''),bw=pc==null?0:Math.min(pc,150)/150*100;
+  h+=`<tr class="sr"><td></td><td class="nm"><span class="ind">└ ${nmS}</span>${note?`<div class="nt">หมายเหตุ: ${esc(note)}</div>`:''}</td>${SA?`<td>${ag}</td>`:''}${SY?`<td class="n">${f(ay)}</td>`:''}<td class="n">${ap!=null?f(ap):(ep!=null?f(ep)+'*':'–')}</td><td class="n"><b>${aa==null?'รอรายงาน':f(aa)}</b></td><td>${u}</td>${SC?(pc==null?'<td><span class="wt" title="รอรายงาน">…</span></td>':pc>=100?'<td><span class="ok" title="ผ่าน">✔</span></td>':'<td><span class="no" title="ไม่ผ่าน">✖</span></td>'):''}
+  <td><div class="bl qh" tabindex="0" data-tip="<b>ข้อ ${n}: ${esc(nmS)}</b><div><span>แผนปี 69</span><span>${ep!=null?f(ep):'–'} ${u}</span></div><div><span>ผลปี 69</span><span><b>${aa==null?'รอรายงาน':f(aa)}</b></span></div><div><span>% ของแผน</span><span><b>${pc==null?'–':f(pc)+'%'}</b></span></div>${ay==null?'':`<div><span>ผลปี 68</span><span>${f(ay)}${py!=null?' ('+f(py)+'%)':''}</span></div>`}"><i style="width:${bw}%"></i><b style="left:66.7%"></b>${SY&&py!=null?`<u style="left:${Math.min(py,150)/1.5}%"></u>`:''}</div></td>
+  ${SQ?aq.map((v,k)=>`<td class="hc qh ${noq?'h0':hc(c[k])}" tabindex="0" data-tip="<b>ข้อ ${n} · ${esc(nmS)} · ไตรมาส ${k+1}</b><div><span>ช่วง</span><span>${QM[k]}</span></div><div><span>ผลรายไตรมาส</span><span>${noq?'–':f(v)}</span></div>${t=='s'&&!noq?`<div><span>ผลสะสม</span><span>${f(cq[k])}</span></div>`:''}${c[k]==null||noq?'':`<div><span>% ของแผน</span><span><b>${f(c[k])}%</b></span></div>`}">${noq?'–':f(v)}</td>`).join(''):''}<td class="hc ${hc(pc)}">${pc==null?'–':f(pc)+'%'}</td></tr>`});
+ return h}
+let SQ=true,SC=true,FS=12;
+function fs(d){FS=Math.min(20,Math.max(9,FS+d));tb.style.fontSize=FS+'px'}
 function tg(k){if(k=='y')SY=!SY;else if(k=='q')SQ=!SQ;else if(k=='s')SC=!SC;else SA=!SA;b68.classList.toggle('on',SY);bag.classList.toggle('on',SA);bq.classList.toggle('on',SQ);bs.classList.toggle('on',SC);draw()}
 function draw0(){clr()}
 const esc=x=>String(x).replace(/"/g,'&quot;');
@@ -162,16 +176,16 @@ function draw(){clr();const gi=fg.value,ag=fa.value;
  const cnt={p:0,f:0,w:0};base.forEach(r=>cnt[S(r)]++);
  let rows=ST?base.filter(r=>S(r)==ST):[...base];
  if(M)rows.sort((a,b)=>a[2]-b[2]||a[0]-b[0]);
- const NC=6+(SQ?4:0)+(SY?2:0)+(SA?1:0)+(SC?1:0);lgy.style.display=SY?'':'none';
- let h='<tr><th>ข้อ</th><th style="text-align:left">ตัวชี้วัด</th>'+(SA?'<th>หน่วยงานที่เกี่ยวข้อง</th>':'')+(SY?'<th class="n">ผล 68</th>':'')+'<th class="n">แผน 69</th><th class="n">ผล 69</th><th>หน่วย</th>'+(SC?'<th>ผลประเมิน</th>':'')+'<th>Bullet (% ของแผน)</th>'+(SQ?'<th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th>':'')+''+(SY?'<th>รวม %</th>':'')+'</tr>';
+ const NC=7+(SQ?4:0)+(SY?1:0)+(SA?1:0)+(SC?1:0);lgy.style.display=SY?'':'none';
+ let h='<tr><th>ข้อ</th><th style="text-align:left">ตัวชี้วัด</th>'+(SA?'<th>หน่วยงานที่เกี่ยวข้อง</th>':'')+(SY?'<th class="n">ผล 68</th>':'')+'<th class="n">แผน 69</th><th class="n">ผล 69</th><th>หน่วย</th>'+(SC?'<th>ผลประเมิน</th>':'')+'<th>Bullet (% ของแผน)</th>'+(SQ?'<th>Q1</th><th>Q2</th><th>Q3</th><th>Q4</th>':'')+''+'<th>รวม %</th>'+'</tr>';
  let last=-1;
  rows.forEach(r=>{const[n,nm,g,u,y,p,a,q,t,ags]=r;
   if(M&&g!=last){h+=`<tr class="g"><td colspan="${NC}">เป้าหมาย ${g+1}: ${GO[g]}</td></tr>`;last=g}
   const pc=pct(a,p,t),py=y==null?null:pct(y,p,t=='l'?'s':t),c=cum(q,t).map(v=>pct(v,p,t));
   const bw=pc==null?0:Math.min(pc,150)/150*100;
-  h+=`<tr><td>${n}</td><td class="nm">${nm}</td>${SA?`<td>${ags}</td>`:''}${SY?`<td class="n">${f(y)}</td>`:''}<td class="n">${f(p)}</td><td class="n"><b>${a==null?'รอรายงาน':f(a)}</b></td><td>${u}</td>${SC?(pc==null?'<td><span class="wt" title="รอรายงาน">…</span></td>':pc>=100?'<td><span class="ok" title="ผ่าน">✔</span></td>':'<td><span class="no" title="ไม่ผ่าน">✖</span></td>'):''}
+  const hs=true;h+=`<tr><td class="${hs?'xp':''}" ${hs?`onclick="tx(${n})"`:''}>${n}</td><td class="nm ${hs?'xp':''}" ${hs?`onclick="tx(${n})" title="คลิกดูรายละเอียดรายหน่วยงาน"`:''}>${hs?`<span class="cv">${OPEN.has(n)?'▾':'▸'}</span>`:''}${nm}</td>${SA?`<td>${ags}</td>`:''}${SY?`<td class="n">${f(y)}</td>`:''}<td class="n">${f(p)}</td><td class="n"><b>${a==null?'รอรายงาน':f(a)}</b></td><td>${u}</td>${SC?(pc==null?'<td><span class="wt" title="รอรายงาน">…</span></td>':pc>=100?'<td><span class="ok" title="ผ่าน">✔</span></td>':'<td><span class="no" title="ไม่ผ่าน">✖</span></td>'):''}
   <td><div class="bl qh" tabindex="0" data-tip="<b>ข้อ ${n}: ${esc(nm)}</b><div><span>แผนปี 69</span><span>${f(p)} ${u}</span></div><div><span>ผลปี 69</span><span><b>${a==null?'รอรายงาน':f(a)}</b></span></div><div><span>% ของแผน</span><span><b>${pc==null?'–':f(pc)+'%'}</b></span></div>${y==null?'':`<div><span>ผลปี 68</span><span>${f(y)} (${f(py)}%)</span></div>`}<div><span>สถานะ</span><span>${pc==null?'รอรายงาน':pc>=100?'ผ่าน':'ไม่ผ่าน'}</span></div>"><i style="width:${bw}%"></i><b style="left:66.7%"></b>${SY&&py!=null?`<u style="left:${Math.min(py,150)/1.5}%"></u>`:''}</div></td>
-  ${SQ?q.map((v,k)=>`<td class="hc qh ${hc(c[k])}" tabindex="0" data-tip="<b>ข้อ ${n} · ไตรมาส ${k+1}</b><div><span>ช่วง</span><span>${QM[k]}</span></div><div><span>ผลรายไตรมาส</span><span>${f(v)}</span></div>${t=='s'?`<div><span>ผลสะสม</span><span>${f(cum(q,t)[k])}</span></div>`:''}<div><span>แผนปี 69</span><span>${f(p)}</span></div><div><span>% ของแผน</span><span><b>${f(c[k])}%</b></span></div>">${f(v)}</td>`).join(''):''}${SY?`<td class="hc ${hc(pc)}">${pc==null?'–':f(pc)+'%'}</td>`:''}</tr>`});
+  ${SQ?q.map((v,k)=>`<td class="hc qh ${hc(c[k])}" tabindex="0" data-tip="<b>ข้อ ${n} · ไตรมาส ${k+1}</b><div><span>ช่วง</span><span>${QM[k]}</span></div><div><span>ผลรายไตรมาส</span><span>${f(v)}</span></div>${t=='s'?`<div><span>ผลสะสม</span><span>${f(cum(q,t)[k])}</span></div>`:''}<div><span>แผนปี 69</span><span>${f(p)}</span></div><div><span>% ของแผน</span><span><b>${f(c[k])}%</b></span></div>">${f(v)}</td>`).join(''):''}<td class="hc ${hc(pc)}">${pc==null?'–':f(pc)+'%'}</td></tr>`+(OPEN.has(n)?subRow(r):'')});
  tb.innerHTML=h;
  const ch=(k,l,v)=>`<span onclick="ss('${k}')" class="${ST==k?'on':''}">${l}: <b>${v}</b></span>`;
  st.innerHTML=`<span onclick="ss('')" class="${ST==''?'on':''}">ทั้งหมด: <b>${base.length}</b></span>`+ch('p','ผ่าน (≥100%)',cnt.p)+ch('f','ไม่ผ่าน',cnt.f)+ch('w','รอรายงาน',cnt.w);
@@ -193,15 +207,17 @@ document.addEventListener('keydown',e=>{if(e.key=='Escape')clr();else if((e.key=
 const SHEET='https://docs.google.com/spreadsheets/d/e/2PACX-1vTsV6QstB_HlXL_Ca_BHYGKz17B0rrzPlzmtk5EUU_7lKpTKyJB041eQQfxYm-d2nHjQK9x4UrJeheq/pub?output=csv';
 function csv(t){const r=[];let row=[],c='',q=false;for(let i=0;i<t.length;i++){const ch=t[i];if(q){if(ch=='"'){if(t[i+1]=='"'){c+='"';i++}else q=false}else c+=ch}else if(ch=='"')q=true;else if(ch==','){row.push(c);c=''}else if(ch=='\n'||ch=='\r'){if(ch=='\r'&&t[i+1]=='\n')i++;row.push(c);r.push(row);row=[];c=''}else c+=ch}row.push(c);r.push(row);return r}
 const num=x=>{const m=String(x||'').replace(/,/g,'').match(/\d+(\.\d+)?/);return m?parseFloat(m[0]):null};
-function apply(rows){let sec=0,got=0;
+function apply(rows){let sec=0,got=0,curI=null;
  rows.forEach(r=>{const a=(r[0]||'').trim();
   if(a.startsWith('ตัวชี้วัดผลสัมฤทธิ์หรือประโยชน์'))sec=1;else if(a.startsWith('ตัวชี้วัดผลการดำเนินงาน'))sec=2;else if(a.startsWith('ปัญหาอุปสรรค'))sec=0;
-  const m=a.match(/^(\d+)\./);if(!sec||!m)return;
+  const m=a.match(/^(\d+)\./);
+  if(sec==2&&!m&&curI){const am=a.match(/^(จร|คน|คต|พค|ทป|สค|สนค|สศท|สวอ|สคพ|สป)\.?$/);if(am){const ty=curI[8],qq=[6,7,9,10].map(c=>{const v=num(r[c]);return v==null&&ty=='s'&&/^\s*-\s*$/.test(r[c]||'')?0:v});(D[curI[0]]=D[curI[0]]||[]).push([am[1]+'.',num(r[3]),num(r[4]),num(r[5]),qq,(r[11]||'').trim()])}return}
+  if(!sec||!m)return;
   const n=+m[1],rec=sec==1?K[n-1]:I.find(x=>x[0]==n);if(!rec)return;
   const o=sec==1?3:4,ty=rec[o+4];
   const y=num(r[3]),p=num(r[4]),a2=num(r[5]);
   const q=[6,7,9,10].map(c=>{const v=num(r[c]);return v==null&&ty=='s'&&/^\s*-\s*$/.test(r[c]||'')?0:v});
-  rec[o]=y;if(p!=null)rec[o+1]=p;rec[o+2]=a2;rec[o+3]=q;got++});
+  rec[o]=y;if(p!=null)rec[o+1]=p;rec[o+2]=a2;rec[o+3]=q;got++;if(sec==2){D[n]=[];curI=rec}else curI=null});
  return got}
 const VER='v8',PROXY='https://api.allorigins.win/raw?url=';let busy=false;
 async function getCSV(){const u=SHEET+'&_='+Date.now(),errs=[];
