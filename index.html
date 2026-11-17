@@ -203,8 +203,8 @@ document.addEventListener('pointermove',e=>{if(pin)return;const h=e.target.close
 document.addEventListener('click',e=>{const h=e.target.closest&&e.target.closest('.qh');if(h){pin=true;act(h,true);place(e.clientX+14,e.clientY+14,h)}else clr()});
 document.addEventListener('focusin',e=>{const h=e.target.closest&&e.target.closest('.qh');if(h&&!pin){const b=h.getBoundingClientRect();act(h,false);place(b.left+b.width/2,b.bottom+6,h)}});
 document.addEventListener('keydown',e=>{if(e.key=='Escape')clr();else if((e.key=='Enter'||e.key==' ')&&e.target.classList&&e.target.classList.contains('qh')){e.preventDefault();const b=e.target.getBoundingClientRect();pin=true;act(e.target,true);place(b.left+b.width/2,b.bottom+6,e.target)}});
-// ---- Google Sheet (published CSV)
-const SHEET='https://docs.google.com/spreadsheets/d/e/2PACX-1vTsV6QstB_HlXL_Ca_BHYGKz17B0rrzPlzmtk5EUU_7lKpTKyJB041eQQfxYm-d2nHjQK9x4UrJeheq/pub?output=csv';
+// ---- Google Sheet (published )
+const SHEET='https://docs.google.com/spreadsheets/d/e/2PACX-1vSr7AgTe0riR5siEaZo8wqva3uB1XMbXe2Dn4ewLwV9Z004HuTfHPoc5YhmavWO1Q/pub?output=csv';
 function csv(t){const r=[];let row=[],c='',q=false;for(let i=0;i<t.length;i++){const ch=t[i];if(q){if(ch=='"'){if(t[i+1]=='"'){c+='"';i++}else q=false}else c+=ch}else if(ch=='"')q=true;else if(ch==','){row.push(c);c=''}else if(ch=='\n'||ch=='\r'){if(ch=='\r'&&t[i+1]=='\n')i++;row.push(c);r.push(row);row=[];c=''}else c+=ch}row.push(c);r.push(row);return r}
 const num=x=>{const m=String(x||'').replace(/,/g,'').match(/\d+(\.\d+)?/);return m?parseFloat(m[0]):null};
 function apply(rows){let sec=0,got=0,curI=null,cl={y:2,p:3,a:4,q:[5,6,8,9],n:10};
